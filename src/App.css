@@ -1,38 +1,110 @@
 .App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
   text-align: center;
+  color: #333;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.repo-list {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  padding: 0 20px 20px 20px;
+}
+
+.repo-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.repo-link {
+  color: #0366d6;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.repo-link:hover {
+  color: #035fc7;
+  text-decoration: underline;
+}
+
+.repo-header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.owner-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.username {
+  font-weight: 500;
+  color: #0366d6;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #586069;
+}
+
+.repo-body h2 {
+  margin: 0 0 10px 0;
+  color: #0366d6;
+  font-size: 1.25rem;
+}
+
+.repo-body p {
+  margin: 0;
+  color: #586069;
+  font-size: 0.9rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #586069;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .repo-item {
+    padding: 15px;
+  }
+
+  .repo-body h2 {
+    font-size: 1.1rem;
   }
 }
